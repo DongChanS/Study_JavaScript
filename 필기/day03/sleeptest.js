@@ -45,12 +45,13 @@ function sleep(sec) {
 }
 
 
-const timeout = () => {
+const timeout = (sec) => {
     setTimeout(() => {
         console.log("두번째")
-    }, 3 * 1000)
+    }, sec * 1000)
 }
 
 console.log("첫번째")
 timeout()
 console.log("세번째")
+
