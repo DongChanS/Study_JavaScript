@@ -46,4 +46,3 @@ res.then(function(obj){
 })
 
 // 받은거 다시 then으로 출력해줘야함.
-
