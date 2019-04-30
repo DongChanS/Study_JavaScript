@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{header}}</h1>
+        <h2>{{subheader}}</h2>
+        <p>{{content}}</p>
+        <input v-model="content">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let app = new Vue({
+            el : '#app',
+            data : {
+                header : 'Todo App',
+                subheader : '이것은 Todo App입니다.',
+                content : '할일을 입력해 주세요.'
+            }
+        })
+    </script>
+</body>
+</html>

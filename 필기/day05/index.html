@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let app = new Vue({
+            el : '#app',
+            data : {
+                msg : 'happy hacking!',
+                age : 34,
+                todos : ['Vue.js 배우기', 'Javascript 복습하기', '어플리케이션 개발하기'],
+                isMarried : false,
+                posts : [
+                    {
+                        id : 1,
+                        content : '1번글',
+                        checked : false,
+                    },{
+                        id : 2,
+                        content : '2번글',
+                        checked : false,
+                    },{
+                        id : 3,
+                        content : '3번글',
+                        checked : false,
+                    },{
+                        id : 4,
+                        content : '4번글',
+                        checked : true,
+                    }
+                ]
+            },
+            methods : {
+                plus : function() {
+                    this.age += 1
+                }
+            }
+        })
+
+    
+        console.log(app)
+    </script>
+</body>
+</html>
