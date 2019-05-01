@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1 v-once >{{header | capitalize}}</h1>
+        <h2>{{ hello() }}</h2>
+        <a v-bind:href="linkSource" v-html="anchor"></a>
+        <img v-bind:src="imageSource" style="height:100px;width:100px;">
+        
+        <div></div>
+        <input v-model="content">
+        <button v-on:click="addTodo">추가</button>
+        <ul>
+            <li v-for="todo in todos">{{todo}}</li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vue.js"></script>
+</body>
+</html>

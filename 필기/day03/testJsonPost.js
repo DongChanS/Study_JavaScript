@@ -24,3 +24,4 @@ XHR.addEventListener('load', function(e){
     const jsonObj = JSON.parse(result)
     console.log(jsonObj)
 })
+
