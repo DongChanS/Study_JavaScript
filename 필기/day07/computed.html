@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="++number">1씩 증가</button>
+        <button @click="--number">1씩 감소</button>
+        <button @click="addTwo(2)">2씩 증가</button>
+        <button @click="secondNumber++">이상한거 1씩 증가</button>
+        <p>{{number}}</p>
+        <p>{{tenUpper()}} && {{computedNumber}} </p>
+    </div>
+    
+
+    <!--Vue.js-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        let vm = new Vue({
+            el : "#app",
+            data : {
+                number : 0,
+                secondNumber : 0,
+            },
+            methods : {
+                tenUpper : function(){
+                    console.log('나는 메서드')
+                    return this.secondNumber > 10 ? '10보다 큽니다' : '10보다 작거나 같습니다'
+                },
+                addTwo : function(num){
+                    return this.number += 2
+                }
+            },
+            computed : {
+                computedNumber : function(){
+                    console.log('나는 컴퓨티드')
+                    return this.secondNumber > 10 ? '10보다 큽니다' : '10보다 작거나 같습니다'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

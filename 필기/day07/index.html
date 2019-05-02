@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>색칠놀이</title>
+    <style>
+        .box {
+            width : 50px;
+            height : 50px;
+            margin: 5px;
+            display : inline-block;
+            background-color: gray;
+        }
+        .red {
+            background-color : red;
+        }
+        .yellow {
+            background-color : yellow;
+        }
+        .green {
+            background-color: green;
+        }
+        .mouse {
+            background-color : aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div @click="changeColor" :class="{red:changed}" class="box"></div>
+        <div :style="inputColor" class="box"></div>
+        <div :class="color" class="box"></div>
+        <div :class="color" class="box"></div>
+        <input @keyup.enter="scream" v-model="userColor"> 
+        <div class="mouse" @mousemove="printCoordinate(10, $event)">
+            {{coordinate}}
+        </div>
+    </div>
+    
+    <!--Vue.js-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
